@@ -183,7 +183,17 @@ public class telaCliente extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btAbrirOSActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btAbrirOSActionPerformed
-       if(tfNome != null && tfContato != null && tfEndereco != null){
+    String nome = tfNome.getText();
+    String contato = tfContato.getText();
+    String endereco = tfEndereco.getText();
+    String marca = tfMarca.getText();
+    String modelo = tfModelo.getText();
+    String ano = tfAno.getText();
+    String placa = tfPlaca.getText();
+    String estadoVeiculo = tfEstadoVeiculo.getText();
+        
+    if (!nome.isEmpty() && !contato.isEmpty() && !endereco.isEmpty()
+            && !marca.isEmpty() && !modelo.isEmpty() && !ano.isEmpty() && !placa.isEmpty() && !estadoVeiculo.isEmpty()) {
         telaOS t = new telaOS();
         this.dispose();
         t.setVisible(true);

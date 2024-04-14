@@ -4,6 +4,8 @@
  */
 package com.mycompany.trabalhoosmecanica;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author roney
@@ -117,9 +119,18 @@ public class telaOS extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btPecasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btPecasActionPerformed
-            pecasServico p = new pecasServico();
+    String problemaRelatado = tfProblemaRelatado.getText();
+    String servico = tfServico.getText();
+    String servicoRealizado = tfServicosSeremRealizados.getText();
+    String valor = tfValor.getText();
+     
+    if(!problemaRelatado.isEmpty() && !servico.isEmpty() && !servicoRealizado.isEmpty() && !valor.isEmpty()){
+        pecasServico p = new pecasServico();
         this.dispose();
         p.setVisible(true);
+    }else{
+            JOptionPane.showMessageDialog(this, "Favor completar todos os campos");    
+    }    
     }//GEN-LAST:event_btPecasActionPerformed
 
 
